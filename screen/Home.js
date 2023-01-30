@@ -1,3 +1,4 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React ,{useState} from 'react';
 import {
   Image,
@@ -10,20 +11,12 @@ import {
     TouchableHighlight,
     TouchableOpacity,
 } from 'react-native';
-// import {
-//   FlatList,
-//   ScrollView,
-//   TextInput,
-//   TouchableHighlight,
-//   TouchableOpacity,
-// } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import categories from './CategoryData';
 import foods from './foods';
 
-
-const Home = () => {
+const Home = ({navigation}) => {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
 
   const ListCategories = () => {
@@ -41,13 +34,13 @@ const Home = () => {
               style={{
                 backgroundColor:
                   selectedCategoryIndex == index
-                    ? Colors.primary
-                    : Colors.secondary,
+                    ? "yellowgreen"
+                    : Colors.light,
                 ...style.categoryBtn,
               }}>
               {/* <View style={style.categoryBtnImgCon}>
                 <Image
-                  source={category.image}
+                  source={require('../assets/back1.jpg')}
                   style={{height: 35, width: 35, resizeMode: 'cover'}}
                 />
               </View> */}
@@ -59,7 +52,7 @@ const Home = () => {
                   color:
                     selectedCategoryIndex == index
                       ? Colors.white
-                      : Colors.primary,
+                      : "black",
                 }}>
                 {category.name}
               </Text>
@@ -74,11 +67,13 @@ const Home = () => {
       <TouchableHighlight
         underlayColor={Colors.white}
         activeOpacity={0.9}
-        >
-        <View style={style.card}>
-          {/* <View style={{alignItems: 'center', top: -40}}>
-            <Image source={food.image} style={{height: 120, width: 120}} />
+        onPress={() =>navigation.navigate("Details")}>
+
+          <View style={style.card}>  
+       {/* <View style={{alignItems: 'center', top: -40}}>
+            <Image source={require('../assets/back1.jpg')} style={{height: 120, width: 120}} />
           </View> */}
+        
           <View style={{marginHorizontal: 20}}>
             <Text style={{fontSize: 18, fontWeight: 'bold'}}>{food.name}</Text>
             <Text style={{fontSize: 14, color: Colors.grey, marginTop: 2}}>
@@ -100,6 +95,7 @@ const Home = () => {
             </View>
           </View>
         </View>
+
       </TouchableHighlight>
     );
   };
@@ -109,8 +105,8 @@ const Home = () => {
         <View>
           <View style={{flexDirection: 'row'}}>
             <Text style={{fontSize: 28}}>Hello,</Text>
-            <Text style={{fontSize: 28, fontWeight: 'bold', marginLeft: 10}}>
-              Ariz
+            <Text style={{fontSize: 28, fontWeight: 'bold', marginLeft: 10,color:"black"}}>
+              Dounia
             </Text>
           </View>
           <Text style={{marginTop: 5, fontSize: 22, color: Colors.grey}}>
@@ -164,7 +160,7 @@ const style = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     flexDirection: 'row',
-    backgroundColor:'black',
+    backgroundColor:Colors.light,
     alignItems: 'center',
     paddingHorizontal: 20,
   },
@@ -172,7 +168,7 @@ const style = StyleSheet.create({
     width: 50,
     height: 50,
     marginLeft: 10,
-    backgroundColor: Colors.primary,
+    backgroundColor: "yellowgreen",
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -194,14 +190,14 @@ const style = StyleSheet.create({
   categoryBtnImgCon: {
     height: 35,
     width: 35,
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.light,
     borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
   },
   card: {
     height: 220,
-    width: 220,
+    width: "75%",
     marginHorizontal: 10,
     marginBottom: 20,
     marginTop: 50,
@@ -213,7 +209,7 @@ const style = StyleSheet.create({
     height: 30,
     width: 30,
     borderRadius: 20,
-    backgroundColor: Colors.primary,
+    backgroundColor: "yellowgreen",
     justifyContent: 'center',
     alignItems: 'center',
   },

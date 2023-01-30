@@ -14,7 +14,7 @@ import { Image,SafeAreaView,StyleSheet, Text, TextInput, View,TouchableOpacity,A
     <View style={styles.container}>
       <Image
         style={styles.background} 
-        source={require('../assets/backs.jpg')}>   
+        source={require('../assets/backss.jpg')}>   
       </Image> 
       <View style={styles.white}></View>
       <SafeAreaView style={styles.form}>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   background:{
     width:'100%',
-    height:'75%',
+    height:'100%',
     position:'absolute',
     top:0,
     resizeMode:'cover'
@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
     width:'100%',
     height:'75%',
     position:'absolute',
-    bottom:0,
-    backgroundColor:'black',
+    bottom:40,
+    // backgroundColor:'black',
     borderTopLeftRadius:60,
     borderTopRightRadius:60,
     shadowColor: '#52006A',  
@@ -76,13 +76,15 @@ const styles = StyleSheet.create({
     fontSize:30,
     color:'#fff',
     alignSelf:'center',
-    marginTop:30
+    marginTop:60,
+    // color:"black"
   },
   form:{
   flex:1,
   justifyContent:'center',
   marginHorizontal:30,
-  },  
+  marginTop:95
+  },
   input:{
     backgroundColor:'#fff',
     height:58,

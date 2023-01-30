@@ -6,7 +6,7 @@ import Signup from './screen/Signup'
 import Home from './screen/Home';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Icon from 'react-native-vector-icons/FontAwesome'
-
+import Details from './screen/DetailsScreen';
 const Stack = createNativeStackNavigator();
 
 function MyStack(){
@@ -33,8 +33,7 @@ function MyStack(){
        <Stack.Screen name="Login" component={Login} />
        <Stack.Screen name="Signup" component={Signup} />
        <Stack.Screen name='Home' component={Home} />
-       
-       
+       <Stack.Screen name='Details' component={Details} />
     </Stack.Navigator>
   )
 }

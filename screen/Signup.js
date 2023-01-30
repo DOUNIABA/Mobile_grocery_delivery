@@ -9,12 +9,11 @@ import { Image,SafeAreaView,StyleSheet, Text, TextInput, View,TouchableOpacity,A
   const handleSignup=()=>{
   console.warn("Hello" +username+ "your account was created successfully")
 }
-
   return (
     <View style={styles.container}>
       <Image
         style={styles.background} 
-        source={require('../assets/backs.jpg')}>   
+        source={require('../assets/backss.jpg')}>   
       </Image> 
       <View style={styles.white}></View>
       <SafeAreaView style={styles.form}>
@@ -50,7 +49,7 @@ import { Image,SafeAreaView,StyleSheet, Text, TextInput, View,TouchableOpacity,A
         <Text onPress={handleSignup} style={{fontWeight:'bold' ,color:'#fff', fontSize:18}}>Sign up</Text>
       </TouchableOpacity>
       <View style={{flexDirection:'row', alignItems:'center', alignSelf:'center' ,}}>
-        <Text style={{marginBottom:15,color:'gray', fontWeight:'600', fontSize:15}}>You have already an account?</Text>
+        <Text style={{marginBottom:15,color:'grey', fontWeight:'600', fontSize:15}}>You have already an account?</Text>
         <TouchableOpacity onPress={() =>navigation.navigate("Login")}>
         <Text style={{marginBottom:15,color:'#f57c00' , fontWeight:'600', fontSize:20}}>Sign In</Text>
         </TouchableOpacity>
@@ -63,11 +62,11 @@ import { Image,SafeAreaView,StyleSheet, Text, TextInput, View,TouchableOpacity,A
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor:'#fff',
+    // backgroundColor:'#fff',
   },
   background:{
     width:'100%',
-    height:'75%',
+    height:'100%',
     position:'absolute',
     top:0,
     resizeMode:'cover'
@@ -76,8 +75,8 @@ const styles = StyleSheet.create({
     width:'100%',
     height:'75%',
     position:'absolute',
-    bottom:0,
-    backgroundColor:'black',
+    bottom:40,
+    // backgroundColor:'black',
     borderTopLeftRadius:60,
     borderTopRightRadius:60,
     shadowColor: '#52006A',  
@@ -87,13 +86,14 @@ const styles = StyleSheet.create({
     fontSize:30,
     color:'#fff',
     alignSelf:'center',
-    marginTop:30
+    marginTop:60,
+    // color:"black"
   },
   form:{
   flex:1,
   justifyContent:'center',
   marginHorizontal:30,
-  marginTop:150
+  marginTop:95
   },  
   input:{
     backgroundColor:'#fff',

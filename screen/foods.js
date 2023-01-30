@@ -1,26 +1,22 @@
 const foods = [
     {
       id: '1',
-      name: 'Meat Pizza',
-      ingredients: 'Mixed Pizza',
+      name: 'Pomme de terre',
       price: '8.30',
     },
     {
       id: '2',
-      name: 'Cheese Pizza',
-      ingredients: 'Cheese Pizza',
+      name: 'Onion',
       price: '7.10',
     },
     {
       id: '3',
-      name: 'Chicken Burger',
-      ingredients: 'Fried Chicken',
+      name: 'Carrot',
       price: '5.10',
     },
     {
       id: '4',
-      name: 'Sushi Makizushi',
-      ingredients: 'Salmon Meat',
+      name: 'concombre',
       price: '9.55',
     },
   ];

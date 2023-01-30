@@ -1,8 +1,7 @@
 
 const categories=[
-    {id:"1",name:'pizza'},
-    {id:"2",name:'Burger'},
-    {id:"3",name:'Sald'},
-  
+    {id:"1",name:'légumes-fruits'},
+    {id:"2",name:' légumes-racine '},
+    {id:"2",name:'légumes tubercules'}, 
 ]
 export default categories
