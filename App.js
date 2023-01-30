@@ -12,25 +12,29 @@ const Stack = createNativeStackNavigator();
 function MyStack(){
   return(
     
-    <Stack.Navigator screenOptions={{headerShown:false}}
-       tabBarOptions={{
-        style:{
-          height:55,
-          borderTopWidth:0,
-          elevation:0,
-        },
-        showLabel:false,
-        activeTintColor:Colors.primary,
+    <Stack.Navigator 
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ focused, color, size }) => {
+        let iconName;
 
-       }}>
+        if (route.name == 'Home') {
+          iconName = focused
+            ? 'ios-information-circle'
+            : 'ios-information-circle-outline';
+        } else if (route.name == 'Settings') {
+          iconName = focused ? 'ios-list' : 'ios-list-outline';
+        }
+        // You can return any component that you like here!
+        return <Icon name="home"  />;
+      },
+      
+    })}>
+
        <Stack.Screen name="Login" component={Login} />
        <Stack.Screen name="Signup" component={Signup} />
-       <Stack.Screen name='Home' component={Home}
-       options={{
-        tabBarIcon:({color})=>(
-          <Icon name="home" color={color} size={28}/>
-        )
-       }} />
+       <Stack.Screen name='Home' component={Home} />
+       
+       
     </Stack.Navigator>
   )
 }
