@@ -2,7 +2,6 @@ import React from 'react';
 import {SafeAreaView,Button, StyleSheet, View, Text, Image,ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { COLORS } from 'react-native/Libraries/NewAppScreen';
-// import {SecondaryButton} from '../components/Button';
 import foods from './foods';
 
 const DetailsScreen = ({navigation, route}) => {
@@ -21,7 +20,7 @@ const DetailsScreen = ({navigation, route}) => {
             alignItems: 'center',
             height: 280,
           }}>
-          <Image source={require('../assets/backss.jpg')} style={{height: 220, width: 220}} />
+          <Image source={item.image} style={{height: 220, width: 220}} />
         </View>
         <View style={style.details}>
           <View
@@ -32,7 +31,7 @@ const DetailsScreen = ({navigation, route}) => {
             }}>
             <Text
               style={{fontSize: 25, fontWeight: 'bold', color:"white"}}>
-              {/* {item.name} */}
+              {item.name}
             </Text>
             <View style={style.iconContainer}>
               <Icon name="favorite-border" color={"green"} size={25} />

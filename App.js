@@ -24,12 +24,11 @@ function MyStack(){
         } else if (route.name == 'Settings') {
           iconName = focused ? 'ios-list' : 'ios-list-outline';
         }
-        // You can return any component that you like here!
-        return <Icon name="home"  />;
+        return <Icon name="home" size="20" />;
       },
       
     })}>
-
+      
        <Stack.Screen name="Login" component={Login} />
        <Stack.Screen name="Signup" component={Signup} />
        <Stack.Screen name='Home' component={Home} />

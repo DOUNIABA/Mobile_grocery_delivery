@@ -39,7 +39,7 @@ import { Image,SafeAreaView,StyleSheet, Text, TextInput, View,TouchableOpacity,A
         <Text onPress={() =>navigation.navigate("Home")} style={{fontWeight:'bold' ,color:'#fff', fontSize:18}}>Login</Text>
       </TouchableOpacity>
       <View style={{marginTop:20,flexDirection:'row', alignItems:'center', alignSelf:'center' ,}}>
-        <Text style={{color:'gray', fontWeight:'600', fontSize:15}}>Don't have an account?</Text>
+        <Text style={{color:'gray', fontWeight:'600', fontSize:18}}>Don't have an account?</Text>
         <TouchableOpacity onPress={() =>navigation.navigate("Signup")}>
         <Text style={{color:'#f57c00' , fontWeight:'600', fontSize:20}}>Sign Up</Text>
         </TouchableOpacity>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     padding:12
   },
   button:{
-    backgroundColor: '#63D471',
+    backgroundColor: 'yellowgreen',
     height:50,
     borderRadius:10,
     justifyContent:'center',

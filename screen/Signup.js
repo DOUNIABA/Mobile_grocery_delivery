@@ -13,7 +13,7 @@ import { Image,SafeAreaView,StyleSheet, Text, TextInput, View,TouchableOpacity,A
     <View style={styles.container}>
       <Image
         style={styles.background} 
-        source={require('../assets/backss.jpg')}>   
+        source={require('../assets/vegetables.jpg')}>   
       </Image> 
       <View style={styles.white}></View>
       <SafeAreaView style={styles.form}>
@@ -49,9 +49,9 @@ import { Image,SafeAreaView,StyleSheet, Text, TextInput, View,TouchableOpacity,A
         <Text onPress={handleSignup} style={{fontWeight:'bold' ,color:'#fff', fontSize:18}}>Sign up</Text>
       </TouchableOpacity>
       <View style={{flexDirection:'row', alignItems:'center', alignSelf:'center' ,}}>
-        <Text style={{marginBottom:15,color:'grey', fontWeight:'600', fontSize:15}}>You have already an account?</Text>
+        <Text style={{marginBottom:15,color:'white', fontWeight:'600', fontSize:18}}>You have already an account?</Text>
         <TouchableOpacity onPress={() =>navigation.navigate("Login")}>
-        <Text style={{marginBottom:15,color:'#f57c00' , fontWeight:'600', fontSize:20}}>Sign In</Text>
+        <Text style={{marginBottom:15,color:'#f57c00' , fontWeight:'600', fontSize:22}}>Sign In</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -66,17 +66,17 @@ const styles = StyleSheet.create({
   },
   background:{
     width:'100%',
-    height:'100%',
+    height:'40%',
     position:'absolute',
     top:0,
-    resizeMode:'cover'
+    resizeMode:'cover',
   },
   white:{
     width:'100%',
     height:'75%',
     position:'absolute',
-    bottom:40,
-    // backgroundColor:'black',
+    bottom:0,
+    backgroundColor:'black',
     borderTopLeftRadius:60,
     borderTopRightRadius:60,
     shadowColor: '#52006A',  
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   flex:1,
   justifyContent:'center',
   marginHorizontal:30,
-  marginTop:95
+  marginTop:100
   },  
   input:{
     backgroundColor:'#fff',
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     padding:12
   },
   button:{
-    backgroundColor: '#63D471',
+    backgroundColor: 'yellowgreen',
     height:50,
     borderRadius:10,
     justifyContent:'center',

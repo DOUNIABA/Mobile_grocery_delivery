@@ -46,9 +46,9 @@ const Home = ({navigation}) => {
               </View> */}
               <Text
                 style={{
-                  fontSize: 15,
-                  fontWeight: 'bold',
-                  marginLeft: 10,
+                  fontSize: 14,
+                  marginRight: 5,
+                  // alignContent:'center',
                   color:
                     selectedCategoryIndex == index
                       ? Colors.white
@@ -70,14 +70,14 @@ const Home = ({navigation}) => {
         onPress={() =>navigation.navigate("Details")}>
 
           <View style={style.card}>  
-       {/* <View style={{alignItems: 'center', top: -40}}>
-            <Image source={require('../assets/back1.jpg')} style={{height: 120, width: 120}} />
-          </View> */}
+       <View style={{alignItems: 'center', top: -40}}>
+            <Image source={food.image} style={{height: 120, width: 120}} />
+          </View>
         
           <View style={{marginHorizontal: 20}}>
             <Text style={{fontSize: 18, fontWeight: 'bold'}}>{food.name}</Text>
             <Text style={{fontSize: 14, color: Colors.grey, marginTop: 2}}>
-              {food.ingredients}
+              {food.description}
             </Text>
           </View>
           <View
@@ -88,7 +88,7 @@ const Home = ({navigation}) => {
               justifyContent: 'space-between',
             }}>
             <Text style={{fontSize: 18, fontWeight: 'bold'}}>
-              ${food.price}
+              DH{food.price}
             </Text>
             <View style={style.addToCartBtn}>
               <Icon name="add" size={20} color={Colors.white} />
@@ -176,7 +176,8 @@ const style = StyleSheet.create({
   categoriesListContainer: {
     paddingVertical: 30,
     alignItems: 'center',
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
+
   },
   categoryBtn: {
     height: 45,
@@ -197,7 +198,7 @@ const style = StyleSheet.create({
   },
   card: {
     height: 220,
-    width: "75%",
+    width: "95%",
     marginHorizontal: 10,
     marginBottom: 20,
     marginTop: 50,
