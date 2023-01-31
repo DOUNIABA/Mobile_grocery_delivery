@@ -1,15 +1,15 @@
-import { NavigationContainer } from '@react-navigation/native';
 import React ,{useState} from 'react';
 import {
   Image,
   SafeAreaView,
   StyleSheet,
   Text,
-  View, FlatList,
-    ScrollView,
-    TextInput,
-    TouchableHighlight,
-    TouchableOpacity,
+  View, 
+  FlatList,
+  ScrollView,
+  TextInput,
+  TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
@@ -80,6 +80,7 @@ const Home = ({navigation}) => {
               {food.description}
             </Text>
           </View>
+
           <View
             style={{
               marginTop: 10,
@@ -87,6 +88,7 @@ const Home = ({navigation}) => {
               flexDirection: 'row',
               justifyContent: 'space-between',
             }}>
+
             <Text style={{fontSize: 18, fontWeight: 'bold'}}>
               DH{food.price}
             </Text>

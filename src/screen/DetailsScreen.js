@@ -1,11 +1,8 @@
 import React from 'react';
-import {SafeAreaView,Button, StyleSheet, View, Text, Image,ScrollView} from 'react-native';
+import {SafeAreaView,TouchableOpacity, StyleSheet, View, Text, Image,ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { COLORS } from 'react-native/Libraries/NewAppScreen';
-import foods from './foods';
 
-const DetailsScreen = ({navigation, route}) => {
-  const item = route.params;
+const DetailsScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={{backgroundColor:"white"}}>
@@ -20,7 +17,7 @@ const DetailsScreen = ({navigation, route}) => {
             alignItems: 'center',
             height: 280,
           }}>
-          <Image source={item.image} style={{height: 220, width: 220}} />
+          <Image source={require('../assets/pomme-de-terre.jpg')} style={{height: 220, width: 220}} />
         </View>
         <View style={style.details}>
           <View
@@ -31,7 +28,7 @@ const DetailsScreen = ({navigation, route}) => {
             }}>
             <Text
               style={{fontSize: 25, fontWeight: 'bold', color:"white"}}>
-              {item.name}
+             Pomme de Terre
             </Text>
             <View style={style.iconContainer}>
               <Icon name="favorite-border" color={"green"} size={25} />
@@ -44,8 +41,11 @@ const DetailsScreen = ({navigation, route}) => {
             and scrambled it to make a type specimen book. It has survived not
             only five centuries.
           </Text>
-          <View style={{marginTop: 40, marginBottom: 40}}>
-            <Button style={{backgroundColor:"white"}} title="Add To Cart" />
+         <View><Text>Price</Text></View> 
+          <View style={{ marginTop: 20}}>
+          <TouchableOpacity style={style.button}>
+        <Text onPress={() =>navigation.navigate("Cart")} style={{fontWeight:'bold' ,color:'yellowgreen', fontSize:18}}>Add To Cart</Text>
+      </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -82,6 +82,14 @@ const style = StyleSheet.create({
     fontSize: 16,
     color: "white",
   },
+  button:{
+    backgroundColor: 'white',
+    height:50,
+    borderRadius:10,
+    justifyContent:'center',
+    alignItems:'center',
+    // marginBottom:50
+  }
 });
 
 export default DetailsScreen;

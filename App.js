@@ -1,38 +1,26 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import { StatusBar } from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Login from './screen/Login'
-import Signup from './screen/Signup'
-import Home from './screen/Home';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import Icon from 'react-native-vector-icons/FontAwesome'
-import Details from './screen/DetailsScreen';
+import Login from './src/screen/Login'
+import Signup from './src/screen/Signup';
+import Home from './src/screen/Home';
+import Details from './src/screen/DetailsScreen';
+import Cart from './src/screen/CartScreen';
+import BottomNavigator from './src/navigation/BottomNavigation';
+
 const Stack = createNativeStackNavigator();
 
 function MyStack(){
   return(
     
-    <Stack.Navigator 
-    screenOptions={({ route }) => ({
-      tabBarIcon: ({ focused, color, size }) => {
-        let iconName;
-
-        if (route.name == 'Home') {
-          iconName = focused
-            ? 'ios-information-circle'
-            : 'ios-information-circle-outline';
-        } else if (route.name == 'Settings') {
-          iconName = focused ? 'ios-list' : 'ios-list-outline';
-        }
-        return <Icon name="home" size="20" />;
-      },
-      
-    })}>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       
        <Stack.Screen name="Login" component={Login} />
        <Stack.Screen name="Signup" component={Signup} />
-       <Stack.Screen name='Home' component={Home} />
+       <Stack.Screen name='Home' component={BottomNavigator} />
        <Stack.Screen name='Details' component={Details} />
+       <Stack.Screen name='Cart' component={Cart} />
     </Stack.Navigator>
   )
 }
@@ -40,6 +28,7 @@ function MyStack(){
 function RootNavigator(){
   return(
     <NavigationContainer>
+      <StatusBar backgroundColor={"white"} barStyle="dark-content" />
       <MyStack />
     </NavigationContainer>
   )

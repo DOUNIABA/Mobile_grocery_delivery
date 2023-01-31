@@ -49,7 +49,7 @@ import { Image,SafeAreaView,StyleSheet, Text, TextInput, View,TouchableOpacity,A
         <Text onPress={handleSignup} style={{fontWeight:'bold' ,color:'#fff', fontSize:18}}>Sign up</Text>
       </TouchableOpacity>
       <View style={{flexDirection:'row', alignItems:'center', alignSelf:'center' ,}}>
-        <Text style={{marginBottom:15,color:'white', fontWeight:'600', fontSize:18}}>You have already an account?</Text>
+        <Text style={{marginBottom:15,color:'gray', fontWeight:'600', fontSize:18}}>You have already an account?</Text>
         <TouchableOpacity onPress={() =>navigation.navigate("Login")}>
         <Text style={{marginBottom:15,color:'#f57c00' , fontWeight:'600', fontSize:22}}>Sign In</Text>
         </TouchableOpacity>
