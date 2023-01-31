@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView,Button, StyleSheet, View, Text, Image, FlatList} from 'react-native';
+import {SafeAreaView,Button,TouchableOpacity, StyleSheet, View, Text, Image, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { "} fro"m 'react-native/Libraries/NewAppScreen';
 import foods from './foods';
@@ -59,8 +59,10 @@ const CartScreen = ({navigation}) => {
               <Text style={{fontSize: 18, fontWeight: 'bold'}}>$50</Text>
             </View>
             <View style={{marginHorizontal: 30}}>
-              <Button title="CHECKOUT" />
-            </View>
+            <TouchableOpacity style={style.button}>
+        <Text onPress={() =>navigation.navigate("")} style={{fontWeight:'bold' ,color:'#fff', fontSize:18}}>Confirm</Text>
+      </TouchableOpacity>            
+      </View>
           </View>
         )}
       />
@@ -88,13 +90,21 @@ const style = StyleSheet.create({
   actionBtn: {
     width: 80,
     height: 30,
-    backgroundColor:"white",
+    backgroundColor:"yellowgreen",
     borderRadius: 30,
     paddingHorizontal: 5,
     flexDirection: 'row',
     justifyContent: 'center',
     alignContent: 'center',
   },
+  button:{
+    backgroundColor: 'yellowgreen',
+    height:50,
+    borderRadius:10,
+    justifyContent:'center',
+    alignItems:'center',
+    // marginBottom:50
+  }
 });
 
 export default CartScreen;

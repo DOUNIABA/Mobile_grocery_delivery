@@ -8,19 +8,20 @@ import Home from './src/screen/Home';
 import Details from './src/screen/DetailsScreen';
 import Cart from './src/screen/CartScreen';
 import BottomNavigator from './src/navigation/BottomNavigation';
-
+import GetStarted from './src/screen/GetStarted';
 const Stack = createNativeStackNavigator();
 
 function MyStack(){
   return(
     
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      
+       <Stack.Screen name='GetStarted' component={GetStarted} />
        <Stack.Screen name="Login" component={Login} />
        <Stack.Screen name="Signup" component={Signup} />
        <Stack.Screen name='Home' component={BottomNavigator} />
        <Stack.Screen name='Details' component={Details} />
        <Stack.Screen name='Cart' component={Cart} />
+
     </Stack.Navigator>
   )
 }
