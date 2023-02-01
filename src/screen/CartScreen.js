@@ -1,9 +1,7 @@
 import React from 'react';
 import {SafeAreaView,Button,TouchableOpacity, StyleSheet, View, Text, Image, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-// import { "} fro"m 'react-native/Libraries/NewAppScreen';
 import foods from './foods';
-// import {PrimaryButton} from '../components/Button';
 
 const CartScreen = ({navigation}) => {
   const CartCard = ({item}) => {

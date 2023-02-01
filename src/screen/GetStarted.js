@@ -4,13 +4,13 @@ import {Text,TouchableOpacity, StyleSheet, View, Image,SafeAreaView} from 'react
 const GetStarted = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: "white"}}>
-      <View style={{height: 400}}>
+      <View style={{height: 350, justifyContent: 'center', alignItems: 'center'}}>
         <Image
           style={{
-            width: '10%',
-            resizeMode: 'contain',
-            bottom: 250,
-            borderRadius:100
+            width: 300,
+            height: 300,
+            borderRadius: 300/2,
+
           }}
           source={require('../assets/bio.jpg')}
         />
@@ -27,7 +27,7 @@ const GetStarted = ({navigation}) => {
               textAlign: 'center',
               color: "grey",
             }}>
-            We help you to find best and delicious food
+            We help you to find best and bio vegetables
           </Text>
         </View>
         <View style={style.indicatorContainer}>
@@ -36,7 +36,7 @@ const GetStarted = ({navigation}) => {
           <View style={style.indicator} />
         </View>
         <TouchableOpacity style={style.button}>
-        <Text onPress={() =>navigation.navigate("Home")} style={{fontWeight:'bold' ,color:'white', fontSize:18}}>Get Started</Text>
+        <Text onPress={() =>navigation.navigate("Signup")} style={{fontWeight:'bold' ,color:'white', fontSize:18}}>Get Started</Text>
       </TouchableOpacity>
       </View>
     </SafeAreaView>

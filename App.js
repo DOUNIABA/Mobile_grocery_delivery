@@ -4,11 +4,11 @@ import { StatusBar } from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './src/screen/Login'
 import Signup from './src/screen/Signup';
-import Home from './src/screen/Home';
 import Details from './src/screen/DetailsScreen';
 import Cart from './src/screen/CartScreen';
 import BottomNavigator from './src/navigation/BottomNavigation';
 import GetStarted from './src/screen/GetStarted';
+
 const Stack = createNativeStackNavigator();
 
 function MyStack(){
